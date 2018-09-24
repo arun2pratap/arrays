@@ -9,9 +9,14 @@ public class ArrayOperationTest {
     @Test
     public void fetchSorted() {
         Integer[] arr = {1, 2, 7, 9, 19, 23, 34, 27, 88};
-        assertEquals(1, ArrayOperation.fetchSorted(arr, 2));
-//        assertEquals(0, ArrayOperation.fetchSorted(arr, 1));
-        assertEquals(8, ArrayOperation.fetchSorted(arr, 88));
-        assertEquals(5, ArrayOperation.fetchSorted(arr, 23));
+        for (int i = 0; i < arr.length; i++) {
+            assertEquals("Value at index "+ i, i, ArrayOperation.fetchSorted(arr, arr[i]));
+        }
+    }
+
+    @Test
+    public void test(){
+        int i = 2;
+        System.out.println("i: " + 2);
     }
 }
